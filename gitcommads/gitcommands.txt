@@ -1,4 +1,4 @@
-git clone https://70d5b68a4ba952fac999087d8f81afacd4505aab@github.com/feb-devops-labs/devops-labs.git
+git clone https://<<token>>@github.com/feb-devops-labs/devops-labs.git
 git add demo.txt
 git commit -m "first commit from Github"
 git config --list
