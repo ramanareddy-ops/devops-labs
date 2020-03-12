@@ -1,0 +1,59 @@
+git clone https://70d5b68a4ba952fac999087d8f81afacd4505aab@github.com/feb-devops-labs/devops-labs.git
+git add demo.txt
+git commit -m "first commit from Github"
+git config --list
+git config --global user.name Ramana
+git config --global user.email XXXXXX@gmail.com
+git config --list
+git logs
+git log
+git push origin master
+vi demo.txt
+git add demo.txt
+git commit -m "second commit"
+git push
+git log
+git fetch
+git pull
+ls -ltr
+git branch QA
+git checkout QA
+git branch -v
+vi test.txt
+git add .
+git commit -m "third file"
+git push origin QA
+git checkout master
+git branch -v
+git merge QA
+git push
+git pull
+git branch -v
+git checkout QA
+git branch -v
+vi rebase.txt
+git add .
+git commit -m "rebase commit"
+git push origin QA
+git checkout master
+git branch -v
+git rebase QA
+git push
+git show
+git log
+git checkout QA
+vi demo.txt
+git add .
+git commit -m "conflict 2"
+git push
+git branch -v
+git checkout master
+git add .
+git commit -m "conflicts2"
+git push
+git pull
+git push
+vi demo.txt
+git add .
+git commit -m "de"
+git push
