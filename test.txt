@@ -1,7 +1,1 @@
-<<<<<<< HEAD
-third conflicts duplicate file 
-||||||| e8c6605... Update test.txt
-third conflicts file 
-=======
 third file
->>>>>>> parent of e8c6605... Update test.txt
