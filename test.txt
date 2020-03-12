@@ -1,1 +1,1 @@
-third duplicate file
+third conflicts duplicate file 
