@@ -57,3 +57,32 @@ vi demo.txt
 git add .
 git commit -m "de"
 git push
+git config merge.tool vimdiff
+cd /home/ec2-user/git/devops-labs/
+git config merge.tool vimdiff
+git config merge.conflictstyle diff3
+git mergetool --tool-help
+git pull
+vi demo.txt
+vi test.txt
+git add .
+git commit -m "duplicating confilicts"
+git push
+clear
+git push
+clear
+git push
+git pull
+vi demo.txt
+vi test.txt
+git add .
+git commit -m "resolved Conflicts"
+git push
+git log
+git revert e8c6605e3703c40402890a38a7b779adeef8074c
+git add .
+git commit -m "reverting"
+git show
+git pull
+git push
+
