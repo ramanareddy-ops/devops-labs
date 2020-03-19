@@ -1,0 +1,39 @@
+link for installing java and maven : https://www.tecmint.com/install-apache-maven-on-centos-7/
+
+Java Installation
+=================
+yum install -y java-1.8.0*
+java -version
+echo "JAVA_HOME=/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.242.b08-0.amzn2.0.1.x86_64" >> ~/.bash_profile
+
+Maven Installation
+=======================
+wget http://www-us.apache.org/dist/maven/maven-3/3.5.4/binaries/apache-maven-3.5.4-bin.tar.gz /usr/lib/
+tar -xvf /usr/lib/apache-maven-3.5.4-bin.tar.gz
+echo "MAVEN_HOME=/usr/lib/apache-maven-3.5.4" >> ~/.bash_profile
+echo "PATH=$PATH:$HOME/bin:$JAVA_HOME/bin:$MAVEN_HOME/bin" >> ~/.bash_profile
+source ~/.bash_profile
+  
+mvn -vesrion
+
+single command to creating the project
+=============================
+mvn archetype:generate -DgroupId=www.flipkart.com -DartifactId=flipkart -DarchetypeArtifactId=maven-archetype-webapp
+
+maven Goals/Phases
+=================
+mvn compile   --> compiling project
+
+mvn test      --> running test cases in project
+
+mvn package   -->pacakge the project
+
+mvn install   --> installing the project
+
+mvn clean     --> cleaning the project
+mvn clean package  --> cleaning and package the project
+mvn pre-clean package  --> pre-clean and pacakge the project
+mvn post-clean package
+mvn test install
+mvn clean test install 
+mvn clean package install  --> cleaning and package and installing the project
