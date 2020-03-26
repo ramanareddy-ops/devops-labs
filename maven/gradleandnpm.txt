@@ -1,0 +1,30 @@
+installation gradle
+===================
+gradle_version=2.9
+wget -N https://services.gradle.org/distributions/gradle-${gradle_version}-all.zip /usr/lib/
+unzip -f /usr/lib/gradle-${gradle_version}-all.zip 
+echo "GRADLE_HOME=/usr/lib/gradle-${gradle_version} >> ~/.bash_profile
+echo "PATH=$PATH:$HOME/bin:$JAVA_HOME/bin:$MAVEN_HOME/bin:$GRADLE_HOME/bin" >> ~/.bash_profile
+source ~/.bash_profile
+gradle -v
+
+gradle init
+
+gradle test
+
+gradle build
+
+gradle clean
+
+gradle clean test
+
+gradle clean build
+
+installation node and npm
+=============================
+curl -sL https://rpm.nodesource.com/setup_10.x | sudo bash -  	 	
+sudo yum -y install nodejs
+
+npm install 
+
+npm start
