@@ -1,0 +1,20 @@
+Installation jenkins:
+====================
+
+Linux:
+============
+wget -O /etc/yum.repos.d/jenkins.repo http://pkg.jenkins.io/redhat-stable/jenkins.repo
+rpm --import http://pkg.jenkins.io/redhat-stable/jenkins.io.key
+yum install jenkins
+systemctl start jenkins
+open browser: http://<IP/hostname>:8080
+cat /var/lib/jenkins/secrets/initialAdminPassword
+ 
+
+Windows:
+================ 
+download jar or exe: https://jenkins.io/download/
+
+java -jar jenkins.war
+
+open browser: http://<IP/hostname>:8080
