@@ -1,0 +1,9 @@
+[devops]
+10.0.0.145
+
+[all:vars]
+ansible_connection=ssh
+ansible_user=ec2-user
+#ansible_ssh_pass=ramana
+ansible_ssh_private_key_file=/home/ec2-user/keyfile
+
