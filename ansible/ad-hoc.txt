@@ -1,0 +1,11 @@
+https://docs.ansible.com/ansible/latest/user_guide/intro_adhoc.html
+
+# check all my inventory hosts are ready to be  # managed by Ansible
+$ ansible all -m ping
+
+# collect and display the discovered facts  # for the localhost
+$ ansible localhost -m setup
+
+# run the uptime command on all hosts in the  # web group
+$ ansible web -m command -a "uptime"
+
