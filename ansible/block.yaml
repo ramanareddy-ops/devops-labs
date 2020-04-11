@@ -1,0 +1,24 @@
+---
+- hosts: devops
+  become: yes
+  become_user: root
+  tasks:
+    - block:
+ 
+      - name: Copy using inline content to first file
+        copy:
+          src: test1.txt
+          dest: /home/ec2-user/some_config_file.conf
+ 
+      - name: Copy using inline content to second file
+        copy:
+          src: test2.txt
+          dest: /home/ec2-user/some_other_config_file.conf
+
+#     - name: install packages
+#       yum: name={{ item }} state=latest
+#       with_items:
+#          - httpd
+#          - git
+#       tags:
+#          - packages
