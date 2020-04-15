@@ -1,3 +1,20 @@
+install
+-----------
+Linux:
+-----
+yum install -y docker*
+
+or 
+https://docs.docker.com/engine/install/centos/
+
+
+Windows:
+------
+https://docs.docker.com/docker-for-windows/install/
+
+docker commands
+----------------
+
 docker build -t <name> <path> : build docker image from Dockerfile
 docker run -t -i -d -p hostport:Dockerport --name name imagesid .--> run docker image
 docker logs  containerid/name : show log data for a running or stopped container
