@@ -1,0 +1,7 @@
+---
+- hosts: devops
+  become: yes
+  become_user: root
+  roles:
+    - {role: copy, tags: [ 'copy']}
+    - {role: ansible-role-apache, tags: [ 'apache']}    
