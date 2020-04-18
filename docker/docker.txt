@@ -27,3 +27,37 @@ docker tag imagename:latest dockerhub/repo:imagename  :name a docker image
 docker login : login to registry
 docker push/pull : push or pull volumes to/from Docker Registries
 docker inspect : return container run time configuration  parameter metadata
+
+
+docker swarm:
+===========
+docker swarm init --> initiating docker swarm
+docker swarm join --> joining to swarm architech
+docker service create  --> create docker service
+docker service inspect --> findind the service information
+docker service ls      --> list the docker services 
+docker service rm      --> removing a service.
+docker service scale   --> scale up/down service
+docker service ps      --> list the docker services
+docker service update  --> updating service 
+
+workser node join:
+--------------
+docker swarm join --token SWMTKN-1-1lt9a5msclu6jau29bjz3lj7boayw9rdhpmne1e9uxdfnvk327-1rmbetx4j5ghfyvtoc4mj8q4j 10.0.1.8:2377
+
+manager node join:
+---------------------
+docker swarm join-token manager SWMTKN-1-1lt9a5msclu6jau29bjz3lj7boayw9rdhpmne1e9uxdfnvk327-1rmbetx4j5ghfyvtoc4mj8q4j 10.0.1.8:237744
+
+
+docker stack creation:
+-----------------------
+docker stack deploy -c docker-compose.yml nginx
+
+
+docker compose up/down
+--------------------
+
+docker-compose up
+
+docker-compose down
