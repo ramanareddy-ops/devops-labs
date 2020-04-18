@@ -1,0 +1,5 @@
+apache installation
+---------------
+
+yum install httpd
+
