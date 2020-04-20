@@ -1,0 +1,15 @@
+monit installation:
+====================
+
+sudo rpm -ivh https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
+
+yum -y install monit
+
+enabling and starting:
+===================
+systemctl enable monit
+sytemctl start monit
+
+checking monit status:
+--------------------
+monit status
