@@ -1,0 +1,47 @@
+
+Tomcat installation:
+=============================
+
+java required for running Tomcat.
+
+curl -O https://downloads.apache.org/tomcat/tomcat-7/v7.0.103/bin/apache-tomcat-7.0.103.zip
+
+unzip apache-tomcat-7.0.103.zip
+cp -rf apache-tomcat-7.0.103.zip /opt/
+
+cd /opt/apache-tomcat-7.0.103/bin
+./startup.sh
+
+ps -ef | grep "tomcat"
+
+./shutdown.sh
+
+vi tomcat-users.xml
+====================
+add these lines in before </tomcat-users>
+
+<role rolename="admin"/>
+  <role rolename="manager"/>
+  <role rolename="manager-gui,manager-jmx,manager-status,manager-script"/>
+  <user username="admin" password="letmein" roles="admin,manager,manager-gui,manager-jmx,manager-status,manager-script"/>
+
+URL: http://hostname:8080  login username:admin password=letmein
+
+install maven and create HelloWorld application:
+===============================================
+cd home/ec2-user/
+mvn archetype:generate -DgroupId=com.devops -DartifactId=helloworld-webapp -DarchetypeArtifactId=maven-archetype-webapp
+
+cd helloworld-webapp/
+
+mvn clean install
+cd target/
+
+Deploy HelloWorld application in Tomcat:
+=============================================
+cp -rf helloworld-webapp* /opt/apache-tomcat-7.0.103/webapps/
+cd /opt/apache-tomcat-7.0.103/webapps/
+
+./startup.sh
+
+
