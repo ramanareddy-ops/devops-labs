@@ -1,4 +1,4 @@
-rmatVersion: 2010-09-09
+AWSTemplateFormatVersion : 2010-09-09
 Description: >-
   AWS CloudFormation Sample Template vpc_single_instance_in_subnet.template:
   Sample template showing how to create a VPC and add an EC2 instance with an
