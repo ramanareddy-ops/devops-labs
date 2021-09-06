@@ -1,8 +1,13 @@
 ---
 - hosts: devops
   become: yes
-  become_user: root  
+  become_user: root
   tasks:
+  - name: installing apache
+    yum:
+      name: httpd
+      state: latest
+
   - name: write the apache config file
     copy:
       src: index.html
